@@ -1,0 +1,106 @@
+#notes-slider {
+  position: fixed;
+  top: 0;
+  right: -350px;
+  width: 350px;
+  height: 100vh;
+  background: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+  z-index: 999999;
+  display: flex;
+  flex-direction: column;
+}
+
+#notes-slider.visible {
+  right: 0;
+}
+
+.slider-header {
+  padding: 16px;
+  background: #2563eb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+#close-slider {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+}
+
+#notes-content {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  resize: none;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#notes-content:focus {
+  outline: none;
+}
+
+.slider-footer {
+  padding: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+#save-notes {
+  width: 100%;
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#save-notes:hover {
+  background-color: #1d4ed8;
+}
+
+#floating-notes-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: move;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  z-index: 999998;
+  user-select: none;
+  touch-action: none;
+}
+
+#floating-notes-button:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+#floating-notes-button svg {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
